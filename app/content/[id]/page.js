@@ -16,8 +16,10 @@ export default async function Content(props) {
           <span className="writer">Write by {post.writer}</span>
           <span className="date">{post.date}</span>
         </div>
-        <Link href={'/edit/' + post._id.toString()}>수정</Link>
-        <Link href={'/edit/' + post._id.toString()}>삭제</Link>
+        <div className='button-group'>
+          <Link className="button-edit" href={'/edit/' + post._id.toString()}>수정</Link>
+          <Link className="button-delete" href="">삭제</Link>
+        </div>
       </div>
       <p class="post-content">{post.content}</p>
     </div>

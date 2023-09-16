@@ -147,3 +147,6 @@ button[type="submit"] {
   justify-content: space-between;
 }
 
+.button-group .button-edit {
+  margin-right: 15px;
+}

@@ -21,7 +21,7 @@ function NavBar() {
   return (
     <header className='header'>
       <nav className="nav-list">
-        <Link className="nav-item active" href="/">홈</Link>
+        <Link className="nav-item active" href="/">blogful</Link>
         <Link className="nav-item" href="/list">마이 블로그</Link>
         <Link className="nav-item" href="/write">글쓰기</Link>
       </nav>
