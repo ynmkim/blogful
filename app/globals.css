@@ -18,7 +18,9 @@ a {
   color: inherit;
 }
 button {
+  font-size: 16px;
   border: 0;
+  background-color: transparent;
 }
 textarea {
   resize: none;
