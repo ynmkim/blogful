@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
+import ButtonEdit from "@/app/button/ButtonEdit";
 
 export default async function Content(props) {
 
@@ -16,10 +16,7 @@ export default async function Content(props) {
           <span className="writer">Write by {post.writer}</span>
           <span className="date">{post.date}</span>
         </div>
-        <div className='button-group'>
-          <Link className="button-edit" href={'/edit/' + post._id.toString()}>수정</Link>
-          <Link className="button-delete" href="">삭제</Link>
-        </div>
+        <ButtonEdit post={ post } />
       </div>
       <p class="post-content">{post.content}</p>
     </div>

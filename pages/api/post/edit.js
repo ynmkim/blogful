@@ -11,7 +11,7 @@ export default async function handler(request, response) {
     
     const db = (await connectDB).db("blogful")
     let post = await db.collection('post').updateOne(
-      {_id : new ObjectId(request.body._id)},
+      { _id : new ObjectId(request.body._id.toString()) },
       { $set: changePost }
     )
     return response.redirect(302, '/list')

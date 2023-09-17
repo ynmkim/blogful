@@ -1,5 +1,4 @@
 export default function Write() {
-  let day = ['일', '월', '화', '수', '목', '금', '토'];
   let today = new Date();
   let dateFormat = today.getFullYear() + '년 ' + (today.getMonth() + 1) + '월 ' + today.getDate() + '일 ' + today.getHours() + '시 ' + today.getMinutes() + '분 ';
   // console.log(dateFormat)

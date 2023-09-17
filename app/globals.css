@@ -21,6 +21,7 @@ button {
   font-size: 16px;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 textarea {
   resize: none;
@@ -32,19 +33,27 @@ textarea {
   background-color: #fff;
   border-bottom: 1px solid rgba(173, 173, 173, 0.25);
 }
-.nav-list {
+.header .inner {
   display: flex;
   align-items: center;
   max-width: 1000px;
   height: 78px;
   margin: 0 auto;
 }
+.header .logo {
+  margin-right: 24px;
+  font-size: 18px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: -20px;
+}
 .nav-item {
   padding: 20px;
   font-size: 18px;
-}
-.nav-item.active {
-  font-weight: bold;
 }
 .container {
   max-width: 1000px;
@@ -148,7 +157,6 @@ button[type="submit"] {
   align-items: center;
   justify-content: space-between;
 }
-
 .button-group .button-edit {
   margin-right: 15px;
 }

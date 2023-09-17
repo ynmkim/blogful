@@ -6,7 +6,9 @@ export default async function List() {
   let category = ['Culture', 'Essay', 'Pepple', 'Library']
 
   const db = (await connectDB).db("blogful")
-  let post = await db.collection('post').find().toArray();
+  let post = await db.collection('post').find().toArray()
+  let postReverse = post.reverse() // 최신순 정렬로 바꾸기
+  // console.log(postReverse)
   // console.log(post[0].title)
 
   return (
@@ -17,15 +19,15 @@ export default async function List() {
       </div>
       <ul className="post-list">
         {
-          post.map((key, i) => { 
+          postReverse.map((key, i) => { 
             return (
              <li className="post-item" key="{i}">
-                <Link href={'/content/' + post[i]._id}>
-                <h4 className="post-title">{post[i].title}</h4>
-                <p className="post-subtitle">{post[i].subtitle}</p>
+                <Link href={'/content/' + postReverse[i]._id}>
+                <h4 className="post-title">{postReverse[i].title}</h4>
+                <p className="post-subtitle">{postReverse[i].subtitle}</p>
                 <div className="write-info">
-                  <span className="writer">Write by {post[i].writer}</span>
-                  <span className="date">{post[i].date}</span>
+                  <span className="writer">Write by {postReverse[i].writer}</span>
+                  <span className="date">{postReverse[i].date}</span>
                 </div>
               </Link>
             </li>
