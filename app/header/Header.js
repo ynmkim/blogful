@@ -9,7 +9,6 @@ export default function Header() {
     { id: 'menu02', name: '글쓰기', path: '/write' },
   ]
   const router = useRouter()
-  console.log(router.pathname)
 
   return (
     <header className='header'>
@@ -19,9 +18,9 @@ export default function Header() {
         </h1>
         <nav className="nav-list">
           {
-            menuData.map((menu) => {
+            menuData.map((menu, i) => {
               return (
-                <Link className="nav-item" href={menu.path} style={{color: router.pathname === menu.path ? '#fd79a8' : 'black'}}>{menu.name}</Link> // ? 왜 안될까
+                <Link className="nav-item" href={menu.path} style={{color: router.pathname === menu.path ? '#fd79a8' : 'black'}} key="{i}">{menu.name}</Link> // ? 왜 안될까
               )
             })
           }

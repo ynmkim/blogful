@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { connectDB } from "@/util/database"
-import ContentLink from "./ContentLink"
 
 export default async function List() {
-  let category = ['Culture', 'Essay', 'Pepple', 'Library']
-
   const db = (await connectDB).db("blogful")
   let post = await db.collection('post').find().toArray()
   let postReverse = post.reverse() // 최신순 정렬로 바꾸기
