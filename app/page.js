@@ -1,6 +1,5 @@
 
 import { connectDB } from "@/util/database"
-import { MongoClient, ObjectId } from "mongodb"
 import Link from 'next/link';
 // export const revalidate = 60;
 
