@@ -7,7 +7,7 @@ export default async function List() {
   let post = await db.collection('post').find().toArray()
   let postReverse = post.reverse() // 최신순 정렬로 바꾸기
   // console.log(postReverse)
-  // console.log(post[0].title)
+  // console.log(post[0].title
 
   return (
     <div className="container">

@@ -2,6 +2,7 @@
 import { connectDB } from "@/util/database"
 import { MongoClient, ObjectId } from "mongodb"
 import Link from 'next/link';
+// export const revalidate = 60;
 
 export default async function Home(props) {
 
@@ -12,8 +13,8 @@ export default async function Home(props) {
   // map 함수로 키값 데이터 바인딩 한다.
   // 최신순으로 배열을 재정렬한다.
   let postLatest = postReverse.slice(0, 3);
+  // await fetch('url', {cache : 'force-cache'})
 
- 
   return (
     <div className="container">
       <div className='heading'>
