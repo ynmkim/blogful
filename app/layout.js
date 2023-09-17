@@ -1,5 +1,7 @@
 import './globals.css'
-import Header from "@/app/header/Header";
+import Link from 'next/link'
+import ButtonLogin from "@/app/components/button/ButtonLogin";
+import NavBar from "@/app/components/nav/NavBar";
 import { getServerSession } from 'next-auth/next'
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
 
@@ -14,7 +16,15 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="ko">
       <body>
-        <Header / >
+        <header className='header'>
+          <div className='inner'>
+            <h1 className='logo'>
+              <Link href="/">blogful</Link>
+            </h1>
+            <NavBar />
+            <ButtonLogin />
+          </div>
+        </header>
         {children}
       </body>
     </html>

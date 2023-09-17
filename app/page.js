@@ -1,4 +1,3 @@
-
 import { connectDB } from "@/util/database"
 import Link from 'next/link';
 // export const revalidate = 60;

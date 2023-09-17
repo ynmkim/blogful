@@ -1,6 +1,6 @@
 import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
-import ButtonEdit from "@/app/button/ButtonEdit";
+import ButtonEdit from "@/app/components/button/ButtonEdit";
 
 export default async function Content(props) {
 

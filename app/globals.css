@@ -27,7 +27,16 @@ textarea {
   resize: none;
 }
 /* ~ reset */
-
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container {
+  max-width: 1000px;
+  padding: 80px 0;
+  margin: 0 auto;
+}
 .header {
   height: 78px;
   background-color: #fff;
@@ -49,27 +58,21 @@ textarea {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-right: -20px;
 }
 .nav-item {
   padding: 20px;
   font-size: 18px;
-}
-.container {
-  max-width: 1000px;
-  padding: 80px 0;
-  margin: 0 auto;
 }
 .heading {
   padding-bottom: 20px;
   margin-bottom: 84px;
   border-bottom: 1px solid #2B2B2B;
 }
-.title {
-  margin-bottom: 15px;
+.heading .title {
   font-size: 28px;
 }
-.desc {
+.heading .desc {
+  margin-top: 10px;
   font-size: 15px;
   color: rgba(43, 43, 43, 0.6);
 }
@@ -115,7 +118,7 @@ textarea {
   vertical-align: top;
   margin-top: 2px;
 }
-.badge {
+/* .badge {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,8 +129,7 @@ textarea {
   border-radius: 16px;
   border: 1px solid #fd79a8;
   color: #fd79a8;
-}
-
+} */
 input, textarea {
   box-sizing: border-box;
   display: block;
@@ -137,7 +139,6 @@ input, textarea {
   font-size: 15px;
   color: #2B2B2B;
   border: 1px solid rgba(173, 173, 173, 0.25);
-
 }
 input[name="title"] {
   height: 48px;
@@ -152,11 +153,80 @@ button[type="submit"] {
   background-color: #fdcb6e;
   cursor: pointer;
 }
-.flex-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.button-group .button-edit {
+.button-edit {
   margin-right: 15px;
+}
+.button-login {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 750px) {
+  body {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .container {
+    max-width: 750px;
+    padding: 50px 15px;
+  }
+  .header {
+    height: 50px;
+  }
+  .header .inner {
+    max-width: 750px;
+    height: 50px;
+    padding: 0 15px;
+  }
+  .header .logo {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  .nav-item {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .heading {
+    padding-bottom: 16px;
+    margin-bottom: 48px;
+  }
+  .heading .title {
+    font-size: 24px;
+  }
+  .post-item {
+    width: 100%;
+    margin: 0 0 40px 0;
+  }
+  .post-title { 
+    margin-bottom: 13px;
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  .post-content {
+    margin-top: 30px;
+    font-size: 15px;
+  }
+  .write-info {
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+  .write-info .writer::after {
+    width: 1px;
+    height: 13px;
+    margin: 0 8px;
+    margin-top: 1px;
+  }
+  input, textarea {
+    padding: 15px; 
+    margin-bottom: 13px;
+    font-size: 14px;
+  }
+  button {
+    font-size: 15px;
+  }
+  .button-edit {
+    margin-right: 8px;
+  }
+  .button-login {
+    font-size: 15px;
+  }
 }

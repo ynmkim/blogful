@@ -22,7 +22,7 @@ export default async function List() {
              <li className="post-item" key="{i}">
                 <Link href={'/content/' + postReverse[i]._id}>
                 <h4 className="post-title">{postReverse[i].title}</h4>
-                <p className="post-subtitle">{postReverse[i].subtitle}</p>
+                {/* <p className="post-subtitle">{postReverse[i].subtitle}</p> */}
                 <div className="write-info">
                   <span className="writer">Write by {postReverse[i].writer}</span>
                   <span className="date">{postReverse[i].date}</span>
