@@ -11,14 +11,12 @@ export default async function Content(props) {
   return (
     <div className="container">
       <h4 className="post-title">{post.title}</h4>
-      <div className="flex-row">
-        <div className="write-info">
-          <span className="writer">Write by {post.writer}</span>
-          <span className="date">{post.date}</span>
-        </div>
-        <ButtonEdit post={ post } />
+      <div className="write-info">
+        <span className="writer">Write by {post.writer}</span>
+        <span className="date">{post.date}</span>
       </div>
       <p class="post-content">{post.content}</p>
+      <ButtonEdit post={ post } />
     </div>
   )
 }

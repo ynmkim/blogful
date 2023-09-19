@@ -10,7 +10,9 @@ export default function ButtonEdit(props) {
   // }, [])
   return (
     <div className='button-group'>
-      <Link className="button-edit" href={'/edit/' + props.post._id.toString()}>수정</Link>
+      <Link className="button-edit" href={'/edit/' + props.post._id.toString()}>
+        <i className="icon-edit" aria-label="수정"><img src="/icon_edit.png" /></i>
+      </Link>
       <button type="button" className="button-delete" onClick={() => {
         fetch('/api/post/delete', // url로 GET 요청
           {
@@ -30,7 +32,11 @@ export default function ButtonEdit(props) {
         }).catch(() => { 
           console.log(error) // 인터넷 문제로 실패시(네트워크 에러) 실행할 코드 
         })
-      }}>삭제</button>
+      }}>
+        <i className="icon-delete" aria-label="삭제">
+          <img src="/icon_delete.png" />
+        </i>
+      </button>
     </div>   
   )
 }
