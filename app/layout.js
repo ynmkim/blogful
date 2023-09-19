@@ -1,10 +1,10 @@
 import './globals.css'
 import Link from 'next/link'
-import NavBar from "@/app/components/nav/NavBar";
-import { getServerSession } from 'next-auth/next'
-import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import ButtonLogIn from './components/button/ButtonLogIn';
 import ButtonLogOut from './components/button/ButtonLogOut';
+import NavBar from "./components/nav/NavBar";
+import { getServerSession } from 'next-auth/next'
+import { authOptions } from '@/pages/api/auth/[...nextauth]';
 
 export const metadata = {
   title: 'blogful',
@@ -22,7 +22,6 @@ export default async function RootLayout({ children }) {
             <h1 className='logo'>
               <Link href="/">blogful</Link>
             </h1>
-         
             <NavBar />
             { 
               session 
