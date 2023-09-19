@@ -157,8 +157,44 @@ button[type="submit"] {
   margin-right: 15px;
 }
 .button-login {
-  font-size: 18px;
+  font-size: 14px;
   flex-shrink: 0;
+}
+.button-out {
+  width: 100%;
+  height: 100%;
+}
+.my-menu-button {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.my-menu-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 132px;
+  border-radius: 8px;
+  border: 1px solid rgba(173, 173, 173, 0.25);
+}
+.my-menu-item {
+  width: 132px;
+  height: 38px;
+  text-align: center;
 }
 @media screen and (max-width: 750px) {
   body {

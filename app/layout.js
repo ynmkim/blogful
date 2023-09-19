@@ -1,6 +1,7 @@
 import './globals.css'
 import Link from 'next/link'
-import ButtonLogin from "@/app/components/button/ButtonLogin";
+import ButtonLogIn from "@/app/components/button/ButtonLogIn";
+import ButtonLogOut from "@/app/components/button/ButtonLogOut";
 import NavBar from "@/app/components/nav/NavBar";
 import { getServerSession } from 'next-auth/next'
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
@@ -12,7 +13,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const session = await getServerSession(authOptions)
- 
+
   return (
     <html lang="ko">
       <body>
@@ -21,8 +22,16 @@ export default async function RootLayout({ children }) {
             <h1 className='logo'>
               <Link href="/">blogful</Link>
             </h1>
+         
             <NavBar />
-            <ButtonLogin />
+            { 
+              session 
+                ? <div className='my-menu-button'>
+                    <div className='avatar'><img src="/image_user_default.png" /></div>
+                    <ButtonLogOut />
+                  </div>
+                : <ButtonLogIn />
+            }
           </div>
         </header>
         {children}
