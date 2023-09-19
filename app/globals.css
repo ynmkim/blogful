@@ -177,12 +177,10 @@ button[type="submit"] {
   align-items: center;
 }
 .icon-writing img,
-.icon-edit img {
+.icon-edit img,
+.icon-delete img {
   display: block;
   width: 28px;
-}
-.icon-delete img {
-  width: 27px;
 }
 .my-menu-button {
   flex-shrink: 0;
@@ -292,9 +290,7 @@ button[type="submit"] {
     margin-right: 0px;
   }
   .icon-writing img,
-  .icon-edit img {
-    width: 20px;
-  }
+  .icon-edit img,
   .icon-delete img {
     width: 20px;
   }
