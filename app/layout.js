@@ -1,10 +1,10 @@
 import './globals.css'
 import Link from 'next/link'
-import ButtonLogIn from "@/app/components/button/ButtonLogIn";
-import ButtonLogOut from "@/app/components/button/ButtonLogOut";
 import NavBar from "@/app/components/nav/NavBar";
 import { getServerSession } from 'next-auth/next'
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
+import ButtonLogIn from './components/button/ButtonLogIn';
+import ButtonLogOut from './components/button/ButtonLogOut';
 
 export const metadata = {
   title: 'blogful',
