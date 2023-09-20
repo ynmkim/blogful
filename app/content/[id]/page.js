@@ -17,7 +17,7 @@ export default async function Content(props) {
       </div>
       <p class="post-content">
         {
-          post.content.split("\n").map((line) => { 
+          post.content.split("\n").map((line, i) => { 
             return (
               <span key={i}>
                 {line}
