@@ -19,7 +19,7 @@ export default async function Content(props) {
         {
           post.content.split("\n").map((line) => { 
             return (
-              <span>
+              <span key={i}>
                 {line}
                 <br />
               </span>
