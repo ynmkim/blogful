@@ -15,7 +15,18 @@ export default async function Content(props) {
         <span className="writer">Write by {post.writer}</span>
         <span className="date">{post.date}</span>
       </div>
-      <p class="post-content">{post.content}</p>
+      <p class="post-content">
+        {
+          post.content.split("\n").map((line) => { 
+            return (
+              <span>
+                {line}
+                <br />
+              </span>
+            );
+          })
+        }
+      </p>
       <ButtonEdit post={ post } />
     </div>
   )

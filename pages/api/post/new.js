@@ -10,6 +10,7 @@ export default async function handler(request, response) {
       return response.status(500).json('제목을 입력하세요.')
     } 
     if (request.body.content == '') {
+      request.body.content = request.body.content.replaceAll("<br>", "\r\n")
       return response.status(500).json('내용을 입력하세요.')
     } 
     
