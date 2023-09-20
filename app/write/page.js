@@ -6,8 +6,11 @@ export default function Write() {
   // let today = new Date();
   // let dateFormat = today.getFullYear() + '년 ' + (today.getMonth() + 1) + '월 ' + today.getDate() + '일 ' + today.getHours() + '시 ' + today.getMinutes() + '분 ';
   
-  let date = moment().format('LLL'); 
-  // console.log(date)
+  // let date = moment().format('LLL'); 
+
+  const offset = 1000 * 60 * 60 * 9
+  const koreaNow = new Date((new Date()).getTime() + offset)
+  const date = koreaNow.toISOString().replace("T", " ").split('.')[0]
 
   return (
      <div className="container">
