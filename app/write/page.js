@@ -1,7 +1,13 @@
+import moment from 'moment';
+import 'moment/locale/ko';
+
 export default function Write() {
-  let today = new Date();
-  let dateFormat = today.getFullYear() + '년 ' + (today.getMonth() + 1) + '월 ' + today.getDate() + '일 ' + today.getHours() + '시 ' + today.getMinutes() + '분 ';
-  // console.log(dateFormat)
+  // 모바일 ios 에서 시간 차이 이슈가 있음
+  // let today = new Date();
+  // let dateFormat = today.getFullYear() + '년 ' + (today.getMonth() + 1) + '월 ' + today.getDate() + '일 ' + today.getHours() + '시 ' + today.getMinutes() + '분 ';
+  
+  let date = moment().format('LLL'); 
+  // console.log(date)
 
   return (
      <div className="container">
@@ -12,7 +18,7 @@ export default function Write() {
         <input name="title" placeholder="제목을 입력해주세요" />
         <input name="writer" placeholder="작성자 이름을 입력해주세요"/> 
         <textarea name="content" placeholder="본문을 입력해주세요" />
-        <input style={{ display: 'none' }} name="date" defaultValue={dateFormat}/>
+        <input style={{ display: 'none' }} name="date" defaultValue={date}/>
         <button type="submit">발행</button>
       </form>
      </div>
